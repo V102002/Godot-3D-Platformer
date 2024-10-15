@@ -1,6 +1,7 @@
-[gd_scene load_steps=4 format=3 uid="uid://bkheh57fwjyh"]
+[gd_scene load_steps=5 format=3 uid="uid://bkheh57fwjyh"]
 
 [ext_resource type="PackedScene" uid="uid://ce4ste77nkwa8" path="res://block.tscn" id="1_udh5x"]
+[ext_resource type="PackedScene" uid="uid://22qtc8l7cx07" path="res://bob.tscn" id="2_kf7nb"]
 
 [sub_resource type="BoxMesh" id="BoxMesh_w0wju"]
 size = Vector3(10, 0.5, 10)
@@ -27,5 +28,19 @@ shape = SubResource("BoxShape3D_3jrqx")
 transform = Transform3D(-0.364893, -0.860221, 0.356192, 0.684495, 0.0114744, 0.728927, -0.631126, 0.509792, 0.58463, 0, 9.48365, 0.609329)
 shadow_enabled = true
 
-[node name="Block" parent="." instance=ExtResource("1_udh5x")]
+[node name="Blocks" type="Node3D" parent="."]
+
+[node name="Block" parent="Blocks" instance=ExtResource("1_udh5x")]
 transform = Transform3D(0.95168, 0.247001, 0.182471, -0.307091, 0.765459, 0.56548, 0, -0.594191, 0.804324, -0.0883555, 2.69824, -0.0813627)
+
+[node name="Block2" parent="Blocks" instance=ExtResource("1_udh5x")]
+transform = Transform3D(0.95168, 0.247001, 0.182471, -0.189246, 0.93967, -0.284966, -0.241849, 0.236664, 0.94101, -0.0883555, 4.88891, -1.30798)
+
+[node name="Block3" parent="Blocks" instance=ExtResource("1_udh5x")]
+transform = Transform3D(0.95168, 0.247001, 0.182471, -0.189246, 0.93967, -0.284966, -0.241849, 0.236664, 0.94101, -0.0883555, 5.46018, 0.390525)
+
+[node name="Block4" parent="Blocks" instance=ExtResource("1_udh5x")]
+transform = Transform3D(0.95168, 0.247001, 0.182471, -0.0211115, 0.645408, -0.763546, -0.306364, 0.722799, 0.619437, -0.0883555, 6.84436, -0.798663)
+
+[node name="Bob" parent="." instance=ExtResource("2_kf7nb")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.704625, 1.70018)

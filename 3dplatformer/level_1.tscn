@@ -14,7 +14,7 @@ size = Vector3(10, 0.5, 10)
 [node name="Level1" type="Node3D"]
 
 [node name="Camera3D" type="Camera3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 0.999604, 0.0281311, 0, -0.0281311, 0.999604, 0, 1.9805, 8.04874)
+transform = Transform3D(1, 0, 0, 0, 0.968409, 0.249366, 0, -0.249366, 0.968409, 0, 3.45457, 8.04874)
 fov = 112.279
 
 [node name="Floor" type="StaticBody3D" parent="."]

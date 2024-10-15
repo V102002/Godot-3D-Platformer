@@ -1,6 +1,6 @@
 extends CharacterBody3D
 
-
+#Need variable to move the object around
 const SPEED = 5.0
 const JUMP_VELOCITY = 4.5
 

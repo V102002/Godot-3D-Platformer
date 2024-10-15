@@ -1,4 +1,6 @@
-[gd_scene load_steps=3 format=3 uid="uid://dhkx30rlwuvaq"]
+[gd_scene load_steps=4 format=3 uid="uid://dhkx30rlwuvaq"]
+
+[ext_resource type="Script" path="res://coin.gd" id="1_7hat2"]
 
 [sub_resource type="CylinderMesh" id="CylinderMesh_nxowe"]
 top_radius = 0.3
@@ -10,6 +12,7 @@ height = 0.15
 radius = 0.3
 
 [node name="Coin" type="Area3D"]
+script = ExtResource("1_7hat2")
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 0, 0, 0)

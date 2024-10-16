@@ -12,8 +12,6 @@ func _process(delta: float) -> void:
 	
 	#Shouldn't use has_overlapping_bodies() because there will be a slight delay between detection of collision and reaction to the collision. 
 	#Use Signals- Signals are a way of handling common types of events
-	#if has_overlapping_bodies(): #If the coin is colliding or overlapping with the any other physics object
-		#queue_free() #Deletes the object from the game
 
 func _on_body_entered(body: Node3D) -> void:
 	queue_free() #Deletes the object from the game

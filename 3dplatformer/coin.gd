@@ -14,4 +14,10 @@ func _process(delta: float) -> void:
 	#Use Signals- Signals are a way of handling common types of events
 
 func _on_body_entered(body: Node3D) -> void:
+	set_collision_layer_value(3,false)
+	set_collision_mask_value(1,false)
+	$AnimationPlayer.play("Bounce")
+
+
+func _on_animation_player_animation_finished(anim_name: StringName) -> void:
 	queue_free() #Deletes the object from the game

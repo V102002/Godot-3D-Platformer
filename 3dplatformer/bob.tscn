@@ -1,4 +1,4 @@
-[gd_scene load_steps=5 format=3 uid="uid://22qtc8l7cx07"]
+[gd_scene load_steps=6 format=3 uid="uid://22qtc8l7cx07"]
 
 [ext_resource type="Script" path="res://bob.gd" id="1_rs5uf"]
 
@@ -8,13 +8,20 @@ albedo_color = Color(0.211765, 0.898039, 0.235294, 1)
 [sub_resource type="BoxMesh" id="BoxMesh_f2q4f"]
 material = SubResource("StandardMaterial3D_ir142")
 
+[sub_resource type="CylinderMesh" id="CylinderMesh_vu8l8"]
+
 [sub_resource type="BoxShape3D" id="BoxShape3D_qltmn"]
 
 [node name="Bob" type="CharacterBody3D"]
+collision_mask = 30
 script = ExtResource("1_rs5uf")
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="."]
 mesh = SubResource("BoxMesh_f2q4f")
+
+[node name="Face" type="MeshInstance3D" parent="MeshInstance3D"]
+transform = Transform3D(0.592763, 0, 0, 0, -4.4454e-09, 0.592763, 0, -0.101699, -2.59105e-08, 0, 0.32112, -0.489498)
+mesh = SubResource("CylinderMesh_vu8l8")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="."]
 shape = SubResource("BoxShape3D_qltmn")
@@ -27,3 +34,6 @@ transform = Transform3D(1, 0, 0, 0, 0.943841, 0.330399, 0, -0.330399, 0.943841, 
 
 [node name="Camera3D" type="Camera3D" parent="Camera_Controller/Camera_Target"]
 current = true
+
+[node name="RayCast3D" type="RayCast3D" parent="."]
+collision_mask = 2

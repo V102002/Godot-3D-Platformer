@@ -1,0 +1,5 @@
+[gd_scene load_steps=2 format=3 uid="uid://dra7a4s4l7vrp"]
+
+[ext_resource type="PackedScene" uid="uid://drni6vp6ctak0" path="res://Assets/Models/World-Blocks-v1.glb" id="1_38cpv"]
+
+[node name="World-Blocks-v1" instance=ExtResource("1_38cpv")]
